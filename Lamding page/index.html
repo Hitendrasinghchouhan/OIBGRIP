@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="logo (1).png" alt="logo"></a>
+      <div class="toggle" onclick=" toggleMenu()"></div>
+      <ul class="navigation" onclick="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+
+    </header>
+    <div class="content">
+      <div class="text-box">
+        <h2>Taste The Feeling</h2><br>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aspernatur ex nobis
+          magnam, porro nam asperiores error dicta explicabo quas deserunt, corrupti quis pariatur optio.
+          Consequuntur consectetur ab qui itaque facere deleniti mollitia id magnam. Ducimus repellat,
+          consequatur qui modi nostrum provident deleniti natus quos.
+        </p>
+        <a href="#">Learn more</a>
+
+      </div>
+      <div class="social-media">
+      <ul class="sci">
+        <li><a href="#"><img src="facebook (1).png" alt="facebook"></a></li>
+        <li><a href="#"><img src="twitter (1).png" alt="facebook"></a></li>
+        <li><a href="#"><img src="instagram (1).png" alt="facebook"></a></li>
+      </ul>
+    </div>
+      <div class="img-box">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="cocacola1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="cocacola3.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="cocacola4.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="cocacola5.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="cocacola6.png" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+
+        </div>
+      </div>
+
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop: true,
+    });
+
+   
+  </script>
+  <script>
+     function toggleMenu(){
+      const menuToggle = document.querySelector('.toggle');
+      const navigation = document.querySelector('.navigation')
+      menuToggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+  </script>
+
+
+</body>
+
+</html>
